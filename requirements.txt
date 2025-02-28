@@ -4,3 +4,4 @@ PyPDF2
 python-docx
 reportlab
 streamlit-extras
+streamlit-pdf-viewer
