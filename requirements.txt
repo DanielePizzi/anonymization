@@ -5,3 +5,7 @@ python-docx
 reportlab
 streamlit-extras
 streamlit-pdf-viewer
+pytesseract
+pdf2image
+PyMuPDF
+poppler-utils
