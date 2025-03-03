@@ -9,6 +9,8 @@ def my_react_component():
     if os.path.exists(index_file):
         with open(index_file, "r", encoding="utf-8") as f:
             html_content = f.read()
-        return components.html(html_content, height=600)  # Adjust height as needed
+
+        # Ensure to embed the complete HTML content with JS/CSS properly included
+        return components.html(html_content, height=800, scrolling=True)
     else:
         return "React app not found. Please check the path."
