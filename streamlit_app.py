@@ -2,13 +2,10 @@ import streamlit as st
 import streamlit.components.v1 as components
 import io
 import fitz  # PyMuPDF per modificare PDF
-import pymupdf
 import pytesseract
 from PIL import Image
 from pdf2image import convert_from_bytes
 from docx import Document
-import sys
-
 
 st.set_page_config(page_title="Editor & Comparator PDF/Word", layout="wide")
 
@@ -38,7 +35,7 @@ if st.session_state.uploaded_file:
         with col1:
             st.subheader("Documento Originale")
             pdf_bytes = st.session_state.uploaded_file.read()
-            doc = pymupdf.open(stream=pdf_bytes, filetype="pdf")
+            doc = fitz.open(stream=pdf_bytes, filetype="pdf")
 
             extracted_text = ""
             for page in convert_from_bytes(pdf_bytes):
