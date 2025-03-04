@@ -9,3 +9,4 @@ pytesseract
 pdf2image
 PyMuPDF
 poppler-utils
+streamlit_drawable_canvas
